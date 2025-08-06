@@ -10,6 +10,6 @@ jobs:
       - run: >
           sudo update-alternatives --set iptables /usr/sbin/iptables-legacy &&
           sudo update-alternatives --set ip6tables /usr/sbin/ip6tables-legacy &&
-          docker run --rm hello-world &&
+          docker run hello-world &&
           iptables --version &&
           sudo modprobe --remove --remove-holders ip_tables
