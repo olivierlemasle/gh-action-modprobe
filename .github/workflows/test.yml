@@ -11,5 +11,6 @@ jobs:
           sudo update-alternatives --set iptables /usr/sbin/iptables-legacy &&
           sudo update-alternatives --set ip6tables /usr/sbin/ip6tables-legacy &&
           docker run hello-world &&
+          docker network create foo &&
           iptables --version &&
           sudo modprobe --remove --remove-holders ip_tables
