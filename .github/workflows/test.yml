@@ -14,4 +14,4 @@ jobs:
           docker run hello-world &&
           docker network create foo &&
           iptables --version &&
-          sudo modprobe --remove --remove-holders ip_tables
+          sudo modprobe --remove --remove-holders ip_tables || lsmod | grep iptable_nat
