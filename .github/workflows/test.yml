@@ -1,9 +1,10 @@
 name: "Test"
 on:
   workflow_dispatch: {}
+  push: {}
 
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - run: sudo modprobe --remove --remove-holders ip_tables
+      - run: docker run --rm hello-world && iptables --version && sudo modprobe --remove --remove-holders ip_tables
