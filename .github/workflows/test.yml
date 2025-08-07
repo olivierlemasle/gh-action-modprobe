@@ -14,7 +14,8 @@ jobs:
           docker run hello-world &&
           docker network create foo &&
           iptables --version &&
-          sudo iptables-legacy -F && sudo iptables-legacy -X && sudo iptables-legacy -t nat -F && sudo iptables-legacy -t nat -X && sudo ip6tables-legacy -F && sudo ip6tables-legacy -X && sudo ip6tables-legacy -t nat -F && sudo ip6tables-legacy -t nat -X && 
+          sudo iptables-legacy -F && sudo iptables-legacy -X && sudo iptables-legacy -t nat -F && sudo iptables-legacy -t nat -X && sudo ip6tables-legacy -F && sudo ip6tables-legacy -X && sudo ip6tables-legacy -t nat -F && sudo ip6tables-legacy -t nat -X && sudo iptables-legacy -t mangle -F && sudo iptables-legacy -t mangle -X && sudo ip6tables-legacy -t mangle -F && sudo ip6tables-legacy -t mangle -X &&
           sudo iptables-legacy -L &&
+          echo ipv6 &&
           sudo ip6tables-legacy -L &&
           sudo modprobe --remove --remove-holders ip_tables
