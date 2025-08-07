@@ -16,4 +16,4 @@ jobs:
           iptables --version &&
           sudo iptables-legacy -L &&
           sudo ip6tables-legacy -L &&
-          sudo modprobe --remove --remove-holders ip_tables || lsmod | grep iptable_nat
+          sudo modprobe --remove --remove-holders ip_tables
