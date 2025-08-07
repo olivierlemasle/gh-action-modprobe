@@ -12,7 +12,6 @@ jobs:
           sudo update-alternatives --set ip6tables /usr/sbin/ip6tables-legacy &&
           sudo systemctl restart docker &&
           docker run hello-world &&
-          docker network create foo &&
           sudo update-alternatives --set iptables /usr/sbin/iptables-nft &&
           sudo update-alternatives --set ip6tables /usr/sbin/ip6tables-nft &&
           sudo systemctl restart docker &&
