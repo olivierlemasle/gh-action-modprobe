@@ -16,5 +16,6 @@ jobs:
           sudo update-alternatives --set iptables /usr/sbin/iptables-nft &&
           sudo update-alternatives --set ip6tables /usr/sbin/ip6tables-nft &&
           sudo systemctl restart docker &&
+          sudo iptables-legacy -F && sudo iptables-legacy -X && sudo iptables-legacy -t nat -F && sudo iptables-legacy -t nat -X && sudo ip6tables-legacy -F && sudo ip6tables-legacy -X && sudo ip6tables-legacy -t nat -F && sudo ip6tables-legacy -t nat -X && sudo iptables-legacy -t mangle -F && sudo iptables-legacy -t mangle -X && sudo ip6tables-legacy -t mangle -F && sudo ip6tables-legacy -t mangle -X &&
           iptables --version &&
           sudo modprobe --remove --remove-holders ip_tables
